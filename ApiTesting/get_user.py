@@ -1,13 +1,20 @@
+import pytest as pytest
 import requests as requests
 
+from config import BASE_URI
 
-def test_get_user_list():
-    url = "https://reqres.in/api/users"
 
-    response = requests.get(url)
+class TestGetUserList:
 
-    print(response.text)
+    @pytest.mark.positive
+    def test_get_user_list(self):
+        url =f'{BASE_URI}/api/people'
 
-    # check response code
-    code = response.status_code
-    assert code == 200, "Code doesn't match"
+        res = requests.get(url)
+        print(res.json())
+
+        assert res.status_code == 200, "Check status code"
+        print(res.json())
+
+
+
