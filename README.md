@@ -127,6 +127,11 @@ First create a python package named "api_test". Then create Python File named "g
 
 
 
+To build a Python REST API test suite, you will need to install Python3 first, and below packages (using pytest test framework in this example).
 
-
+```
+pip3 install -U requests Flask pytest pytest-html
+```
  
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l5ufmby8g7wqajtr7kw6.png)
+
