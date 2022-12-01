@@ -135,3 +135,35 @@ pip3 install -U requests Flask pytest pytest-html
  
 ![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l5ufmby8g7wqajtr7kw6.png)
 
+**<u>Generate Report using Allure</u>**
+
+
+```
+python3 -c "import nltk; nltk.download('all')"
+```
+
+```
+pytest --alluredir=allure_reports
+```
+
+```
+allure serve allure_reports
+```
+
+**<u>Generate Report using Pytest</u>**
+
+```
+pytest
+```
+
+```
+pytest -rA
+```
+
+```
+pip3 install pytest-html
+```
+
+```
+pytest --html=Report/REPORT.html
+```
